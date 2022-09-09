@@ -19,7 +19,7 @@ pipeline {
         }
         stage("Create Container"){
         steps{
-            sh 'docker run -d -p 8888:8080 arnabd24/php:latest'
+            sh 'docker run --name webserver -d -p 8888:8080 arnabd24/php:latest'
         }
     }
 }
